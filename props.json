@@ -1,0 +1,28 @@
+{
+    "core": {
+        "id": "666b42c1-6385-5339-9229-5262f158f40b",
+        "name": "mtb-template-cat4",
+        "version": "1.0.0.31708"
+    },
+    "opt": {
+        "props": {
+            "TemplateData": {
+                "4390x": {
+                    "deps": "cat4_dependencies",
+                    "files": [
+                        "filelist/cat4.txt"
+                    ]
+                },
+                "udd_key": "DeviceDie"
+            },
+            "dependency_sets": {
+                "cat4_dependencies": [
+                    "deps/core-lib.mtbx",
+                    "deps/core-make.mtbx",
+                    "deps/mtb-hal-cat4.mtbx",
+                    "deps/recipe-make-cat4.mtbx"
+                ]
+            }
+        }
+    }
+}
