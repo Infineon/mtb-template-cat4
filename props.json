@@ -2,18 +2,37 @@
     "core": {
         "id": "666b42c1-6385-5339-9229-5262f158f40b",
         "name": "mtb-template-cat4",
-        "version": "1.0.0.31708"
+        "version": "1.1.0.32855"
     },
     "opt": {
         "props": {
             "TemplateData": {
                 "4390x": {
+                    "defines": "cat4_defines",
                     "deps": "cat4_dependencies",
                     "files": [
                         "filelist/cat4.txt"
-                    ]
+                    ],
+                    "files_init": "filelist/4390x.txt"
                 },
                 "udd_key": "DeviceDie"
+            },
+            "define_sets": {
+                "cat4_defines": [
+                    {
+                        "description": "Option to indicate that the Hardware Abstraction Layer APIs are expected to be used. This will cause the BSP to add calls to initialize the system functions.",
+                        "display": "Using HAL interface",
+                        "options": [
+                            {
+                                "default": false,
+                                "define": "CY_USING_HAL",
+                                "display": "CY_USING_HAL",
+                                "value": ""
+                            }
+                        ],
+                        "type": "choice"
+                    }
+                ]
             },
             "dependency_sets": {
                 "cat4_dependencies": [

@@ -39,15 +39,22 @@ extern "C" {
 /**
  * \cond INTERNAL
  */
-/* Macros that don't really belong here, but provided for compatability with middleware libraries
- * that expect them. This will be reviewed in a future release when we explore removing them from
- * other board types too. */
+
+/* Macros that don't really belong here, but provided for compatibility with
+ * middleware libraries that expect them. This will be reviewed in a future
+ * release when we explore removing them from other board types too.
+ */
 #define CY_CFG_PWR_MODE_ACTIVE          (0x00UL)
 #define CY_CFG_PWR_MODE_SLEEP           (0x01UL)
 #define CY_CFG_PWR_MODE_DEEPSLEEP       (0x02UL)
-/* M2M for WHD needs high-speed clock */
+
+/* Default to use Deep Sleep */
+#ifndef CY_CFG_PWR_SYS_IDLE_MODE
 #define CY_CFG_PWR_SYS_IDLE_MODE        (CY_CFG_PWR_MODE_ACTIVE)
-#define CY_CFG_PWR_DEEPSLEEP_LATENCY    (0UL)
+#endif
+
+#define CY_CFG_PWR_DEEPSLEEP_LATENCY    (24UL)  /* Min. 24 for this device */
+
 /** \endcond */
 
 /**
