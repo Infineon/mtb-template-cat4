@@ -1,6 +1,8 @@
 # ModusToolbox CAT4 BSP Template Library Release Notes
 
 ### What Changed?
+#### v1.1.1
+- Fixed Compilation errors regarding cybsp_pins.h not being in chip flow BSP's.
 #### v1.1.0
 - Added support for BSP Assistant chip flow
 - Update MTBX dependencies to use MTB 3.0 Query APIs
